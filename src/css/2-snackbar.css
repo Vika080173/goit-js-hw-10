@@ -1,0 +1,89 @@
+.form {
+  margin-top: 36px;
+  margin-left: 156px;
+  width: 355px;
+  height: 40px;
+  gap: 0px;
+  opacity: 0px;
+  border-radius: 4px;
+}
+label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: left;
+  margin-bottom: 8px;
+}
+legend {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.input-radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  /* width: 104px;
+  height: 32px; */
+  width: 14px;
+  height: 14px;
+}
+
+fieldset {
+  width: 360px;
+  height: 64px;
+  padding: 0;
+  margin: 0 0 24px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  color: #2e2f42;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.input-number {
+  border: 1px solid #000;
+  border-radius: 4px;
+  width: 344px;
+  height: 40px;
+  margin-top: 8px;
+  padding-left: 16px;
+}
+
+/* body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+} */
+
+button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  background: #4e75ff;
+  border-color: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+button:hover {
+  background: #6c8cff;
+}

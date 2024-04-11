@@ -5,21 +5,31 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+@import url('./1-timer.css');
+@import url('./2-snackbar.css');
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+/* Body styles */
+body {
+  color: #2e2f42;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+.list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.section {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.txt {
+  margin-top: 10px;
+  font-size: 20px;
+  color: blue;
 }

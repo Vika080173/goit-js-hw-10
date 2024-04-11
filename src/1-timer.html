@@ -4,14 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="iziToast.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Timer</title>
   </head>
   <body>
-    <section>
-      <a href="./index.html">Go to home</a>
-      <h1>Welcome to Timer</h1>
+    <section class="section">
+      <a href="./index.html">На головну</a>
+      <p class="txt">Таймер зворотного відліку</p>
     </section>
-    <script src="./js/1-timer.js"></script>
+    <section class="time">
+      <input type="text" id="datetime-picker" />
+      <button class="btn" type="button" data-start>Start</button>
+
+      <div class="timer">
+        <div class="field">
+          <span class="value" data-days>00</span>
+          <span class="label">Days</span>
+        </div>
+        <div class="field">
+          <span class="value" data-hours>00</span>
+          <span class="label">Hours</span>
+        </div>
+        <div class="field">
+          <span class="value" data-minutes>00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div class="field">
+          <span class="value" data-seconds>00</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
+    </section>
+    <script src="iziToast.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script type="module" src="./js/1-timer.js"></script>
   </body>
 </html>

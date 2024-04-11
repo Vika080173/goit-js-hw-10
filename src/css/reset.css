@@ -33,3 +33,19 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Body styles */
+body {
+  color: #2e2f42;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  margin: 0;
+}
+
+.list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
