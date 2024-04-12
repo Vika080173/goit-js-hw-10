@@ -11,8 +11,10 @@ const timerMinutes = document.querySelector('[data-minutes]');
 const timerSeconds = document.querySelector('[data-seconds]');
 
 startBtn.addEventListener('click', clickStartTimer);
+startBtn.disabled = true;
+
 let userSelectedDate;
-let intervalId = null;
+let timer;
 
 // обєкт параметру flatpickr
 const options = {
@@ -22,7 +24,8 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     console.log(selectedDates[0]);
-    if (selectedDates[0] <= Date.now()) {
+    const data = new Date(selectedDates[0]);
+    if (data.getTime() <= Date.now()) {
       iziToast.error({
         backgroundColor: 'red',
         message: 'Please choose a date in the future',
@@ -31,7 +34,7 @@ const options = {
       startBtn.disabled = true;
     } else {
       startBtn.disabled = false;
-      userSelectedDate = selectedDates[0];
+      userSelectedDate = data.getTime();
     }
   },
 };
@@ -40,8 +43,22 @@ flatpickr(inputDate, options);
 
 // відлік часу
 function clickStartTimer() {
-  input.disabled = true;
+  timer = setInterval(() => {
+    let remainingTimeMs = userSelectedDate - Date.now();
+    if (remainingTimeMs <= 0) {
+      clearInterval(timer);
+    } else {
+      updateClockface(convertMs(remainingTimeMs));
+    }
+  }, 1000);
+  inputDate.disabled = true;
   startBtn.disabled = true;
+}
+function updateClockface({ days, hours, minutes, seconds }) {
+  timerDays.textContent = `${days}`;
+  timerHours.textContent = `${hours}`;
+  timerMinutes.textContent = `${minutes}`;
+  timerSeconds.textContent = `${seconds}`;
 }
 // розрахунок часу
 function convertMs(ms) {
